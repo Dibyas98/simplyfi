@@ -10,6 +10,7 @@ This project is a Node.js application that uses MongoDB to manage articles, user
 - Store and manage notifications in the database.
 - Utilize Redis for caching popular articles' likes and views.
 ## API Reference
+[**Base Url**](https://simplyfi.onrender.com/)https://simplyfi.onrender.com/
 #### User Create 
 
 ```http
