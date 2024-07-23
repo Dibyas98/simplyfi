@@ -4,7 +4,8 @@ const app =express();
 const userRoute = require('./route/user.js')
 const articleRoute = require('./route/article.js')
 const notifiRoute = require('./route/notification.js')
-
+const dotenv= require('dotenv')
+dotenv.config()
 app.use(express.json());
 app.use('/api',userRoute)
 app.use('/api',articleRoute)
@@ -17,7 +18,7 @@ app.use('/api',notifiRoute)
 
 
 
-mongoose.connect('mongodb://localhost:27017/mydatabase')
+mongoose.connect(process.env.DATABASE_URL)
 .then(()=>{
     console.log("Database connexted succefully");
 })
