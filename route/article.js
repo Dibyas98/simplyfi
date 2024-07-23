@@ -42,6 +42,7 @@ router.post('/articles/:id/likes', async (req, res) => {
             articleId,
             maessage:`Your acticle has been liked by user ${userId}`
         })
+        console.log(notification);
         await notification.save();
 
 
@@ -70,8 +71,8 @@ router.post('/articles/:id/view', async (req, res) => {
 
         // Find the article and increment the view count
         const article = await articleModel.findById(articleId);
-        const newLikeCount = article.views + 1;
-        const updatedArticle = await articleModel.findByIdAndUpdate(articleId, { views: newLikeCount }, { new: true });
+        const newviewCount = article.views + 1;
+        const updatedArticle = await articleModel.findByIdAndUpdate(articleId,{ views: newviewCount }, { new: true });
 
         res.json({
             success: true,
