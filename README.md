@@ -1,4 +1,14 @@
 
+# Project Title
+
+This project is a Node.js application that uses MongoDB to manage articles, users, and notifications. It provides APIs for creating articles and users, liking and viewing articles, and sending notifications when an article is liked.
+
+**Features**
+- Create, read, update, and delete (CRUD) operations for articles and users.
+- Track and cache the number of likes and views for articles.
+- Send notifications to users when their articles are liked.
+- Store and manage notifications in the database.
+- Utilize Redis for caching popular articles' likes and views.
 ## API Reference
 #### User Create 
 
@@ -45,5 +55,4 @@
 
 ```http
   POST /api/notifiaction/:notifyId
-}
 ```
