@@ -42,7 +42,6 @@ router.post('/articles/:id/likes', async (req, res) => {
             articleId,
             maessage:`Your acticle has been liked by user ${userId}`
         })
-        console.log(notification);
         await notification.save();
 
 
