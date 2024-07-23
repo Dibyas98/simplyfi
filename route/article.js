@@ -6,9 +6,9 @@ const viewModel = require ('../model/viewedScheme')
 const Notification = require('../model/notification')
 
 
-router.post('/articles', async (req, res) => {
+router.post('/articles/:userId', async (req, res) => {
     try {
-        const article = new articleModel({...req.body,author:req.user});
+        const article = new articleModel({...req.body,author:req.params.userId});
         await article.save()
         res.json({
             success:true,
